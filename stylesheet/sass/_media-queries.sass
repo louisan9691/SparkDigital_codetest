@@ -1,0 +1,142 @@
+=breakpoint($min)
+  $type: type-of($min)
+  @if $type == string
+    @if $min == mobile-p
+      @media screen and (max-width: 479px) and (orientation : portrait)
+        @content
+    @if $min == mobile-l
+      @media screen and (max-width: 767px) and (orientation : landscape)
+        @content
+    @if $min == tablet
+      @media screen and (min-width: 768px) and (orientation: portrait)
+        @content
+    @else
+      @warn "Breakpoint mixin supports xs, sm, md, lg"
+
+
+//--------------BREAKPOINT FOR SMALL MOBILE SCREEN
++breakpoint(mobile-p)
+  .panel-1
+    background-image: url(../../images/js-320.png)
+    height: 60vh
+    background-size: cover
+    .intro
+      top: 50px
+      h5
+        font: 0.625em $body-font
+        font-weight: 300
+      h3
+        font: 1.5em georgia, serif
+      p
+        font: 0.65em $body-font
+        margin: -30px 10%
+        margin-bottom: 10px
+      a
+
+        font: 0.65em serif
+        visibility: visible
+        color: white
+        text-decoration: none
+        border: 1px white solid
+        padding: 10px 20px
+
+  .panel-2
+    flex-direction: column
+    padding-bottom: 250px
+    .text
+      margin: 50px 50px 0 50px
+      p
+        font: 0.5em $body-font
+        &:first-letter
+          font: 100% $body-font
+          color: $p-color
+          margin: 0px
+          float: none
+    .image
+      margin: 20px auto
+      .top, .btm
+        width: 60vw
+        /*center both pictures*/
+        left: 50%
+        transform: translate(-50%)
+
+
+
++breakpoint(mobile-l)
+  .panel-1
+    background-image: url(../../images/js-320.png)
+    height: 100vh
+    background-size: cover
+    .intro
+      top: 50px
+      h5
+        font: 0.625em $body-font
+        font-weight: 300
+      h3
+        font: 1.5em georgia, serif
+      p
+        font: 0.65em $body-font
+        margin: -30px 10%
+        margin-bottom: 10px
+      a
+
+        font: 0.65em serif
+        visibility: visible
+        color: white
+        text-decoration: none
+        border: 1px white solid
+        padding: 10px 20px
+
+  .panel-2
+    flex-direction: column
+    padding-bottom: 110vh
+    .text
+      margin: 50px 50px 0 50px
+      p
+        font: 0.8em $body-font
+        &:first-letter
+          font: 100% $body-font
+          color: $p-color
+          margin: 0px
+          float: none
+    .image
+      margin: 20px auto
+      .top, .btm
+        width: 50vw
+        /*center both pictures*/
+        left: 50%
+        transform: translate(-50%)
+
+
++breakpoint(tablet)
+  .panel-1
+    background-image: url(../../images/js-320.png)
+    height: 50vh
+    background-size: cover
+    .intro
+      top: 50px
+      h5
+        font: 0.625em $body-font
+        font-weight: 300
+      h3
+        font: 1.5em georgia, serif
+      p
+        font: 0.65em $body-font
+        margin: 30px 10%
+        margin-bottom: 30px
+      a
+        font: 0.65em serif
+        visibility: visible
+        color: white
+        text-decoration: none
+        border: 1px white solid
+        padding: 10px 20px
+
+  .panel-2
+    padding-bottom: 50%
+    .text
+      margin: 50px 50px 0 50px
+    .image
+      margin: 20px auto
+      .top, .btm
+        width: 40vw
