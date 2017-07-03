@@ -14,7 +14,7 @@
       @warn "Breakpoint mixin supports xs, sm, md, lg"
 
 
-//--------------BREAKPOINT FOR SMALL MOBILE SCREEN
+//--------------BREAKPOINT FOR MOBILE SCREEN + PORTRAIT MODE
 +breakpoint(mobile-p)
   .panel-1
     background-image: url(../../images/js-320.png)
@@ -61,7 +61,7 @@
         transform: translate(-50%)
 
 
-
+//--------------BREAKPOINT FOR MOBILE SCREEN + LANDSCAPE MODE
 +breakpoint(mobile-l)
   .panel-1
     background-image: url(../../images/js-320.png)
@@ -108,6 +108,8 @@
         transform: translate(-50%)
 
 
+
+//--------------BREAKPOINT FOR TABLET SCREEN
 +breakpoint(tablet)
   .panel-1
     background-image: url(../../images/js-320.png)
